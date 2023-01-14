@@ -1,0 +1,17 @@
+.navbutton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: blue;
+
+
+
+}
+
+.shopping {
+    font-style: italic;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: fantasy;
+}

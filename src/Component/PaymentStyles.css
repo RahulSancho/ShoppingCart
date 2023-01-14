@@ -1,0 +1,29 @@
+.invoiceo{
+    background-color: blue;
+color:whitesmoke;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.paymentTable{
+    position: relative;
+    padding: 35px;
+    word-spacing: 10px;
+   text-align: left;
+   margin-top: 20px;
+   width:100%;
+   border: 1px solid silver;
+   border-collapse: collapse;
+   background-color: lemonchiffon;
+
+}
+.paymentTable th,.paymentTable tr,.paymentTable td{
+
+    border: 2px solid silver ;
+    padding: 10px;
+
+}

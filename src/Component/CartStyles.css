@@ -1,0 +1,19 @@
+.cartTable{
+     position: relative;
+     padding: 35px;
+     word-spacing: 10px;
+ text-align: left;
+ margin-top: 10px;
+ width:100%;
+ border: 1px solid silver;
+ border-collapse: collapse;
+ background-color: lemonchiffon;
+
+
+}
+.cartTable th, .cartTable tr, .cartTable td{
+     border: 2px  solid silver;
+     padding: 20px;
+
+}
+ 

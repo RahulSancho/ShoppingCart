@@ -1,0 +1,20 @@
+.userTable{
+
+  position: relative;
+  padding: 35px;
+  word-spacing: 10px;
+ text-align: left;
+ margin-top: 20px;
+ width:100%;
+ border: 1px solid silver;
+ border-collapse: collapse;
+ background-color: lemonchiffon;
+}
+.userTable th, .userTable td,.userTable tr{
+    border: 2px solid silver;
+    padding: 20px;
+}
+.deleteButton{
+    color: blue;
+    font-style: italic;
+}

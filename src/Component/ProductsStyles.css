@@ -1,0 +1,50 @@
+
+
+.plink{
+  width: 80px;
+  height: 20px;
+  padding: 10px;
+  background-color:gray;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+  list-style: none;
+  text-decoration: none;
+}
+  
+.productTable{
+  position: relative;
+  padding: 35px;
+  word-spacing: 10px;
+ text-align: left;
+ margin-top: 20px;
+ width:100%;
+ border: 1px solid silver;
+ border-collapse: collapse;
+ background-color: lemonchiffon;
+}
+.productTable th,.productTable tr,.productTable td{
+  border: 2px solid silver;
+  padding: 10px;
+
+}
+.actionBtn{
+  width:80px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: aqua;
+margin-left: 10px;
+  
+}
+#search{
+  border: 2px solid black;
+  margin-left: 500px;
+  background-color: seashell;
+  
+}
+
+.snack{
+  color: aliceblue;
+}
+

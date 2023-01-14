@@ -1,0 +1,44 @@
+.Orders{
+    padding: 15px;
+    text-align: left;
+    text-align: center;
+    background-image: black;
+
+   
+}
+.carto li{
+  list-style: none;
+}
+.carto li a{
+  text-decoration: none;
+ 
+ }
+ .link{
+  width: 80px;
+  height: 20px;
+  padding: 10px;
+  background-color:gray;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+ }
+.OrderTable{
+  position: relative;
+   padding: 35px;
+   word-spacing: 10px;
+  text-align: left;
+  margin-top: 20px;
+  width:100%;
+  border: 1px solid silver;
+  border-collapse: collapse;
+  background-color: lemonchiffon;
+  
+}
+.OrderTable th,
+.OrderTable tr,
+.OrderTable td{
+  border: 2px solid silver;
+  padding: 20px;
+
+}
