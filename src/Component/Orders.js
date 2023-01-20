@@ -4,6 +4,8 @@ import './OrdersStyles.css'
 import moment from 'moment'
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom'
+import { FaTrash }from "react-icons/fa";
+import { Button } from '@mui/material';
 
 
 export const Orders = () => {
@@ -41,9 +43,9 @@ export const Orders = () => {
 
   return (
     <>
-      <div><h1>Orders</h1></div>
+      
      
-      <div className='carto'><li><a href=""><NavLink className="link" to='/cart'>CART </NavLink></a> </li></div>
+     <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'#1DA1F2'}}><NavLink className="link" to='/cart'>CART </NavLink></Button> 
       <table className='OrderTable'>
         <thead>
         
@@ -66,7 +68,7 @@ export const Orders = () => {
               <td>{p.amount}</td>
               <td>{date}</td>
               <td>{p.productName}</td>
-              <td><button className='actionBtn' onClick={() => deleteOrders(p.orderId)}>Delete</button></td>
+              <td><button className='actionBtn' onClick={() => deleteOrders(p.orderId)}title='delete'><FaTrash/></button></td>
             </tr>
           )
         }

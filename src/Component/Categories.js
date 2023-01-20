@@ -4,6 +4,7 @@ import _, { result } from 'lodash'
 import './CategoriesStyles.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Modal } from '@mui/material'
+import { FaEdit, FaTrash } from "react-icons/fa";
 
 
 export const Categories = () => {
@@ -57,7 +58,9 @@ export const Categories = () => {
 
 
   const getCategory= (event)=>{
-    
+    if(event.target.value === 'all') {
+      return setFilterResult(categories)
+    }
     let cat = _.filter( categories , c => c.path?.includes(event.target.value))
     setFilterResult(cat)
   }
@@ -66,13 +69,14 @@ export const Categories = () => {
 
   return (
     <>
-      <div className='Categories'><h1>Categories</h1>
+      <div className='Categories'>
 
         <div className='add-categorie'><Link className='plink' to='/addcategories'>Add Categories</Link></div>
 
       
         
         <select className='drops' onChange={(e)=>getCategory(e)} >
+          <option selected value={'all'}>ALL</option>
           <option value={'Electronics'} >
             
             Electronics</option>
@@ -97,8 +101,8 @@ export const Categories = () => {
 
                 <td>{p.categoryName}</td>
 
-                <td> <Link to={`/edit-category/${p.categoryId}`} state={{ store: p }}><button className='actionBtn'>Update</button></Link>
-                  <button className='actionBtn' onClick={() => deleteCategories(p.categoryId)}>DELETE</button></td>
+                <td> <Link to={`/edit-category/${p.categoryId}`} state={{ store: p }} title="edit"><button className='actionBtn'> <FaEdit /></button></Link>
+                  <button className='actionBtn' onClick={() => deleteCategories(p.categoryId)} title='delete'> <FaTrash /></button></td>
               </tr>
             )
           }

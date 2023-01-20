@@ -4,6 +4,7 @@ import _ from 'lodash'
 import './ProductsStyles.css'
 import { Link } from 'react-router-dom'
 import { Snackbar } from '@mui/material'
+import { FaBeer, FaDolly, FaEdit, FaHeart, FaTrash } from "react-icons/fa";
 
 
 
@@ -102,7 +103,7 @@ export const Products = () => {
 
   return (
     <>
-      <div><h1>Products List</h1></div>
+
 
       <div className='add-product'><Link className='plink' to='/addproducts'>Add product</Link></div>
         <input type='search' className='inputSearch' placeholder='What are u looking for' value={filtervalue} onInput={(e) => handleFilter(e)} id="search"/>
@@ -115,6 +116,7 @@ export const Products = () => {
           <th>PRODUCTNAME</th>
           <th>PRODUCTPRICE</th>
           <th>CATEGORYID</th>
+          <th>IMAGE</th>
           <th>ACTION</th>
         </thead>
         <tbody>{
@@ -126,10 +128,11 @@ export const Products = () => {
               <td>{p.productName}</td>
               <td>{p.productPrice}</td>
               <td>{p.categoryId}</td>
-              <td> <Link to={`/edit-product/${p.productId}`} state={{ store: p }}><button className='actionBtn'>Update</button></Link>
-                <button className='actionBtn' onClick={() => deleteProducts(p.productId)}>Delete</button>
-                <button className='actionBtn' onClick={() => placeOrder(p)} >PlaceOrder</button>
-                <button className='actionBtn' onClick={() => addToCart(p)} >AddToCart
+              <td><img src={`data:image/jpeg;base64,${p.photos}`} width='50px' height='70px'/></td>
+              <td> <Link to={`/edit-product/${p.productId}`} state={{ store: p }}><button className='actionBtn' title='update'><FaEdit/></button></Link>
+                <button className='actionBtn' onClick={() => deleteProducts(p.productId)}title='delete'><FaTrash/></button>
+                <button className='actionBtn' onClick={() => placeOrder(p)}  title='PlaceOrder'><FaDolly/></button>
+                <button className='actionBtn' onClick={() => addToCart(p)}  title='AddToCart'><FaHeart/>
 
                   <Snackbar
                     open={cart}

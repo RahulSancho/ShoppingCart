@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(orange,purple);
+    
   }
   
   .auth-form-container,.login-form,.register-form{

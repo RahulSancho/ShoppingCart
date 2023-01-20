@@ -23,10 +23,11 @@ useEffect(()=>{
    }
   return (
     <>
-    <div><h1>Payments</h1></div>
+
     <div><Link className='invoiceo' to='/invoice'>Invoice</Link></div>
     <table className='paymentTable'>
-      <thead>
+      <thead> 
+          
       
             <th>PAYMENTMODE</th>
             <th>DATE</th>
@@ -53,4 +54,4 @@ useEffect(()=>{
     </table>
     </>
   )
-}
+}     

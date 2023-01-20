@@ -1,7 +1,11 @@
+import { Button } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import './AddCategoriesStyles.css'
+import {  FaArrowAltCircleLeft } from "react-icons/fa";
+
+
 
 export const AddCategories = () => {
     const location = useLocation();
@@ -9,7 +13,7 @@ export const AddCategories = () => {
     const [addCategories, setAddCategories] = useState({
 
         categoryName: '',
-        typeOfCategory: ''
+        parentCategory: ''
     })
     const[display,setDisplay]=useState([]);
     useEffect(()=>{
@@ -19,11 +23,11 @@ export const AddCategories = () => {
             console.log(response.data);
 
         })
-    })
+    },[])
    
     useEffect(() => {
         console.log(location)
-        if (location.state?.store) {
+        if (location.state?.store) {  
             setAddCategories(location.state.store)
 
         }
@@ -51,13 +55,14 @@ export const AddCategories = () => {
     
     return (
         <div><h1>AddCategories</h1>
+       <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:' #1DA1F2'}}><Link className='back' to='/home'><FaArrowAltCircleLeft/>BACK</Link></Button> 
             <form className='add-categories' onSubmit={handleSubmit}>
+                <input type='text' placeholder='categoryName' name='categoryName' value={addCategories.categoryName} onChange={changeHandler}></input>
 
-               
-            <select name="categoryName" id="name" onChange={changeHandler}>
-                {display.map(m=><option key={m.categoryId} value={m.categoryId}>{m.categoryName}</option>)}
+            <select name="parentCategory" id="parentCategory" onChange={changeHandler}>
+                {display.map(m=><option key={m.categoryId} value={m.categoryId}>{m.parentCategory}</option>)}
 </select>
-                <input type='text' placeholder='typeOfCategory' name='typeOfCategory' value={addCategories.typeOfCategory} onChange={changeHandler}></input>
+             
                 <button className='add' type='submit'>{addCategories.categoryId?"update":"Add Categories"}</button>
             </form>
         </div>

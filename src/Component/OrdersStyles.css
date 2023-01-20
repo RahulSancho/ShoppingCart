@@ -6,23 +6,11 @@
 
    
 }
-.carto li{
-  list-style: none;
-}
-.carto li a{
+.link{
   text-decoration: none;
+  color: white;
+}
  
- }
- .link{
-  width: 80px;
-  height: 20px;
-  padding: 10px;
-  background-color:gray;
-  border: 1px solid silver;
-  border-radius: 5px;
-  margin-left: 20px;
-  margin-bottom: 100px;
- }
 .OrderTable{
   position: relative;
    padding: 35px;
@@ -35,10 +23,15 @@
   background-color: lemonchiffon;
   
 }
-.OrderTable th,
-.OrderTable tr,
-.OrderTable td{
-  border: 2px solid silver;
-  padding: 20px;
-
+.OrderTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
 }
+.OrderTable th,.OrderTable td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+

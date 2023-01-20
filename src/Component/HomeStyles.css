@@ -1,11 +1,11 @@
+
+
 .navbutton {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: blue;
-
-
-
+    justify-content: space-around;
+    background: sandybrown;
+    width: 100vw;
 }
 
 .shopping {
@@ -15,3 +15,20 @@
     font-size: x-large;
     font-family: fantasy;
 }
+.bg-image {
+    background-image: url('https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80');
+    background-repeat: no-repeat;
+    height: calc(100vh - 8rem);
+    width: 100vw;
+    background-position: center;
+    background-attachment: scroll;
+    /* object-fit: contain; */
+}
+.logout{
+    text-decoration: none;
+    
+}
+
+
+  
+   

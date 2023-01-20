@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import './UsersStyles.css'
 
@@ -37,7 +38,7 @@ export const Users = () => {
 
   return (
     <>
-      <div><h1>Users</h1></div>
+      
 
       <table className='userTable'>
         <thead>
@@ -66,8 +67,8 @@ export const Users = () => {
                 <td>{p.email}</td>
                 <td>{p.gender}</td>
                
-                <td><Link to={`/edit-user/${p.userId}`}><button className='actionBtn'>Update</button></Link>
-                  <button className='actionBtn' type="submit" value="Delete" onClick={() => deleteUsers(p.userId)}>Delete</button></td>
+                <td><Link to={`/edit-user/${p.userId}`}><button className='actionBtn' title='update'><FaEdit/></button></Link>
+                  <button className='actionBtn' type="submit" value="Delete" onClick={() => deleteUsers(p.userId)}><FaTrash/></button></td>
               </tr>
             )
           }

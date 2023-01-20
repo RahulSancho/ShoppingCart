@@ -10,9 +10,16 @@
  border-collapse: collapse;
  background-color: lemonchiffon;
 }
-.userTable th, .userTable td,.userTable tr{
-    border: 2px solid silver;
-    padding: 20px;
+.userTable th, .userTable td{
+    border: 1px solid #ddd;
+  padding: 8px;  
+}
+.userTable th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: blue;
+    color: white;
 }
 .deleteButton{
     color: blue;

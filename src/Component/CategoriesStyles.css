@@ -16,17 +16,24 @@ color:whitesmoke;
 text-align: left;
 margin-left: 10px;
 margin-top: 10px;
-width:90%;
+width:100%;
 border: 1px solid silver;
 border-collapse: collapse;
 
 background-color: lemonchiffon;
 }
-.categoryTable th ,.categoryTable tr,.categoryTable td{
-  border: 2px solid silver;
-  padding: 10px;
-  
+.categoryTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
 }
+.categoryTable td,.categoryTable th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
 .actionBtn{
   width:80px;
   height: 30px;

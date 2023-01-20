@@ -10,7 +10,14 @@
  border-collapse: collapse;
  background-color:lemonchiffon;
 }
-.invoiceTable th, .invoiceTable tr,.invoiceTable td{
-  border: 2px solid silver;
-  padding :20px;
+.invoiceTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+.invoiceTable td,.invoiceTable th{
+  border: 1px solid #ddd;
+  padding: 8px;
 }

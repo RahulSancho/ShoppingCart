@@ -24,11 +24,20 @@
  border-collapse: collapse;
  background-color: lemonchiffon;
 }
-.productTable th,.productTable tr,.productTable td{
-  border: 2px solid silver;
-  padding: 10px;
+.productTable th,.productTable td{
+  border: 1px solid #ddd;
+  padding: 8px;  
+
 
 }
+.productTable th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
+}
+
 .actionBtn{
   width:80px;
   height: 30px;

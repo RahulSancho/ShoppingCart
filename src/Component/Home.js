@@ -9,6 +9,7 @@ import { Products } from '../Component/Products';
 import {Payments} from '../Component/Payments';
 import { Categories } from '../Component/Categories';
 import { Users } from '../Component/Users';
+import { Button } from '@mui/material';
 
 
 
@@ -69,52 +70,25 @@ function Home() {
 
 
     return (
-        <>
-            <nav>
-
-
-
-                {/* <div>
-                    <ul id="navbar">
-                        <li><a href=""><NavLink to='/orders'>ORDERS</NavLink></a> </li>
-                        <li><a href=""> <NavLink to='/products '>PRODUCTS </NavLink>
-                        </a> </li>
-                        <li><a href=""><NavLink to='/categories'>CATEGORIES</NavLink></a></li>
-
-
-                        <li><a href=""><NavLink to='/payments'>PAYMENT </NavLink></a> </li>
-
-                        <li><a href=""><NavLink to='/users'>USERS </NavLink></a> </li>
-
-
-                    </ul>
-                </div> */}
+        <div style={{height: '100vh'}}>
                 <div className='navbutton'>
-
                     <div className='shopping'><h1>Shopping</h1></div>
                     <img src={logo} className='my-logo' alt='logo' ></img>
-                    <button onClick={() => handleShow("showorders")}>Orders</button>
-                    <button onClick={() => handleShow("showproducts")}>Products</button>
-                    <button onClick={() => handleShow("showcategories")}>Categories</button>
-                    <button onClick={() => handleShow("showpayments")}>Payments</button>
-                    <button onClick={() => handleShow("showusers")}>Users</button>
+                    <Button variant='outlined' className='primary' style={{borderRadius: '20px', backgroundColor: 'white'}} onClick={() => handleShow("showorders")}>Orders</Button>
+                    <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'white'}} onClick={() => handleShow("showproducts")}>Products</Button>
+                    <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'white'}} onClick={() => handleShow("showcategories")}>Categories</Button>
+                    <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'white'}} onClick={() => handleShow("showpayments")}>Payments</Button>
+                    <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'white'}} onClick={() => handleShow("showusers")}>Users</Button>
+                    <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'white'}}><NavLink className='logout' to='/login'> LogOut</NavLink></Button>
                 </div>
-
-            </nav>
-            <div>
-
-
+        { !showorders && !showproducts && !showcategories && !showpayments && !showusers ? 
+        <div className='bg-image'></div> : "" }
                 {showorders ? <Orders></Orders> : null}
                 {showproducts ? <Products></Products> : null}
                 {showcategories ? <Categories></Categories> : null}
                 {showpayments ? <Payments></Payments> : null}
                 {showusers ? <Users></Users> : null}
-
-
-            </div>
-
-
-        </>
+        </div>
     )
 }
 

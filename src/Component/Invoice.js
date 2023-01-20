@@ -49,7 +49,7 @@ export class Invoice extends Component {
     const { posts, errorMsg } = this.state
     return (
       <>
-        <div><h1>Invoice</h1></div>
+     
         <Link to='/home'>Back</Link>
         <table className='invoiceTable'>
           <thead>

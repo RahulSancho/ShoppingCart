@@ -11,9 +11,17 @@
 
 
 }
-.cartTable th, .cartTable tr, .cartTable td{
-     border: 2px  solid silver;
-     padding: 20px;
-
+.cartTable th{
+   
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: blue;
+          color: white;
+        
 }
+.cartTable td,.cartTable th{
+     border: 1px solid #ddd;
+     padding: 8px;
+   }
  

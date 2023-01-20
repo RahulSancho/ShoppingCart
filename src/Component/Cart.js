@@ -1,8 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FaHeart, FaTrash } from "react-icons/fa";
 
 import './CartStyles.css'
+import { Button } from '@mui/material';
 
 
 export const Cart = () => {
@@ -46,7 +48,7 @@ export const Cart = () => {
     axios.post(`http://localhost:8080/order/post`, order)
       .then(res => {
         console.log(res.data);
-        
+
 
       })
 
@@ -62,8 +64,8 @@ export const Cart = () => {
   }
   return (
     <>
-      <div><h1>Cart</h1></div>
-      <Link to='/home'>Back</Link>
+    
+      <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'#1DA1F2'}}><Link className='back' to='/home'>Back</Link></Button>
       <table className='cartTable'>
         <thead>
 
@@ -81,8 +83,8 @@ export const Cart = () => {
               <td>{p.productId}</td>
               <td>{date}</td>
               <td>{p.productName}</td>
-              <td> <button className='actionBtn' onClick={() => deleteCart(p.cartId)}>REMOVE</button>
-                <button className='actionBtn' onClick={() => placeOrder(p)} >PlaceOrder</button></td>
+              <td> <button className='actionBtn' onClick={() => deleteCart(p.cartId)} title='Remove'><FaTrash/></button>
+                <button className='actionBtn' onClick={() => placeOrder(p)} title='placeorder'><FaHeart/></button></td>
 
             </tr>
           )

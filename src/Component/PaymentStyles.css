@@ -21,9 +21,16 @@ color:whitesmoke;
    background-color: lemonchiffon;
 
 }
-.paymentTable th,.paymentTable tr,.paymentTable td{
+.paymentTable th,.paymentTable td{
 
-    border: 2px solid silver ;
-    padding: 10px;
-
+    border: 1px solid #ddd;
+    padding: 8px;  
+  
+}
+.paymentTable th{
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blue;
+  color: white;
 }
