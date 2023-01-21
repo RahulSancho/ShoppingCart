@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import axios from 'axios'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
@@ -50,7 +51,7 @@ export class Invoice extends Component {
     return (
       <>
      
-        <Link to='/home'>Back</Link>
+       <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'#1DA1F2'}}><Link className='back' to='/home'>Back</Link></Button> 
         <table className='invoiceTable'>
           <thead>
            

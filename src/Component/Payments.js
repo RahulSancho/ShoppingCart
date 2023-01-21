@@ -3,6 +3,7 @@ import moment from 'moment'
 import React, { useEffect, useState } from 'react'
 import './PaymentStyles.css'
 import { Link } from 'react-router-dom'
+import { Button } from '@mui/material';
 
 export const Payments = () => {
   const[payment,setShowPayments]=useState([]);
@@ -24,7 +25,7 @@ useEffect(()=>{
   return (
     <>
 
-    <div><Link className='invoiceo' to='/invoice'>Invoice</Link></div>
+    <Button variant='outlined' className='primary' style={{borderRadius:'20px',backgroundColor:'#1DA1F2'}}><Link className='invoiceo' to='/invoice'>Invoice</Link></Button>
     <table className='paymentTable'>
       <thead> 
           

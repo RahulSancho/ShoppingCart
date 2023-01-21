@@ -3,16 +3,16 @@ import React, { Component, useEffect, useState } from 'react'
 import _, { result } from 'lodash'
 import './CategoriesStyles.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Modal } from '@mui/material'
+import { Button, Modal } from '@mui/material'
 import { FaEdit, FaTrash } from "react-icons/fa";
 
 
 export const Categories = () => {
   const [categories, setCategories] = useState([])
   const [search, setSearch] = useState([]);
-  
-  const [filterResult,setFilterResult] =useState([]);
- 
+
+  const [filterResult, setFilterResult] = useState([]);
+
 
   useEffect(() => {
     getCategories();
@@ -57,28 +57,28 @@ export const Categories = () => {
   }
 
 
-  const getCategory= (event)=>{
-    if(event.target.value === 'all') {
+  const getCategory = (event) => {
+    if (event.target.value === 'all') {
       return setFilterResult(categories)
     }
-    let cat = _.filter( categories , c => c.path?.includes(event.target.value))
+    let cat = _.filter(categories, c => c.path?.includes(event.target.value))
     setFilterResult(cat)
   }
-    
+
 
 
   return (
     <>
       <div className='Categories'>
 
-        <div className='add-categorie'><Link className='plink' to='/addcategories'>Add Categories</Link></div>
+        <Button variant='outlined' className='primary' style={{ borderRadius: '20px', backgroundColor: '#1DA1F2' }}><Link className='plink' to='/addcategories'>Add Categories</Link></Button>
 
-      
-        
-        <select className='drops' onChange={(e)=>getCategory(e)} >
+
+
+        <select className='drops' onChange={(e) => getCategory(e)} >
           <option selected value={'all'}>ALL</option>
           <option value={'Electronics'} >
-            
+
             Electronics</option>
           <option value={'FASHIONS'} >Fashion</option>
           <option value={'FURNITURES'} >Furniture</option>

@@ -3,7 +3,7 @@ import axios from 'axios'
 import _ from 'lodash'
 import './ProductsStyles.css'
 import { Link } from 'react-router-dom'
-import { Snackbar } from '@mui/material'
+import { Button, Snackbar } from '@mui/material'
 import { FaBeer, FaDolly, FaEdit, FaHeart, FaTrash } from "react-icons/fa";
 
 
@@ -105,7 +105,7 @@ export const Products = () => {
     <>
 
 
-      <div className='add-product'><Link className='plink' to='/addproducts'>Add product</Link></div>
+      <Button variant='outlined' className='primary' style={{borderRadius:'20px', backgroundColor:'#1DA1F2'}}><Link className='plink' to='/addproducts'>Add product</Link></Button>
         <input type='search' className='inputSearch' placeholder='What are u looking for' value={filtervalue} onInput={(e) => handleFilter(e)} id="search"/>
 
 

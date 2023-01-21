@@ -1,16 +1,8 @@
 
 
 .plink{
-  width: 80px;
-  height: 20px;
-  padding: 10px;
-  background-color:gray;
-  border: 1px solid silver;
-  border-radius: 5px;
-  margin-left: 20px;
-  margin-bottom: 100px;
-  list-style: none;
   text-decoration: none;
+  color: white;
 }
   
 .productTable{
@@ -22,7 +14,7 @@
  width:100%;
  border: 1px solid silver;
  border-collapse: collapse;
- background-color: lemonchiffon;
+ background-color: floralwhite;
 }
 .productTable th,.productTable td{
   border: 1px solid #ddd;
