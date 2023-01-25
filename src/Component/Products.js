@@ -82,8 +82,6 @@ export const Products = () => {
   const addToCart = (p) => {
     let cart = {
       productId: p.productId,
-      date: '',
-      productName: p.productName
     }
     axios.post(`http://localhost:8080/cart/post`, cart)
       .then(res => {

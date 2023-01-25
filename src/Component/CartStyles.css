@@ -24,4 +24,10 @@
      border: 1px solid #ddd;
      padding: 8px;
    }
- 
+ .increment{
+     width: 30px;
+     height: 40px;
+     font-size: 30px;
+     background-color: green;
+     color: honeydew;
+ }

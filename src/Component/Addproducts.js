@@ -19,6 +19,7 @@ export const Addproducts = () => {
     const[productName, setProductName] = useState('')
     const[productPrice, setProductPrice] = useState('')
     const[categoryId, setCategoryId] = useState('')
+    const[productQuantity,setProductQuantity]=useState('')
     const[photos, setPhotos] = useState('')
 
     const[display,setDisplay]=useState([]);
@@ -37,6 +38,7 @@ export const Addproducts = () => {
             setProductName(location.state.store)
             setProductPrice(location.state.store)
             setCategoryId(location.state.store)
+            setProductQuantity(location.state.store)
             setPhotos(location.state.store)
         }
     }, [location])
@@ -53,6 +55,7 @@ export const Addproducts = () => {
   formData.append("productName",productName)
   formData.append("productPrice",productPrice)
   formData.append("categoryId",categoryId)
+  formData.append("productQuantity",productQuantity)
   formData.append("photos",photos)
 
             axios.post(`http://localhost:8080/products/post`, formData).then((res) => {
@@ -71,6 +74,7 @@ export const Addproducts = () => {
                 <div className='productsbody'>
                 <input type="text" placeholder='productName' name='productName' value={productName} onChange={e => setProductName(e.target.value)}></input>
                 <input type="text" placeholder='productPrice' name='productPrice' value={productPrice} onChange={e => setProductPrice(e.target.value)}></input><br></br>
+                <input type='text' placeholder='productQuantity' name='productQuantity'value={productQuantity} onChange={e=>setProductQuantity(e.target.value)}></input>
 
                 <input type='file' name='photos'  onChange={e => setPhotos(e.target.files[0])} />
                 <select name='Category' id='Category'  placeholder=' parentCategory' onChange={e => setCategoryId(e.target.value)}>

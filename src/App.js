@@ -22,6 +22,7 @@ import { AddCategories } from './Component/AddCategories';
 
 
 
+
 function App() {
   return (
     <div>
@@ -45,6 +46,7 @@ function App() {
           <Route path='/addcategories' element={<AddCategories />} />
           <Route path='/edit-category/:categoryId' element={<AddCategories />} />
           <Route exact path='/edit-user/:userId' element={<Register />} />
+        
       
 
         </Routes>
