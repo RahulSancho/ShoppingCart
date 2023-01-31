@@ -59,7 +59,7 @@ export const AddCategories = () => {
             <form className='add-categories' onSubmit={handleSubmit}>
                 <input type='text' placeholder='categoryName' name='categoryName' value={addCategories.categoryName} onChange={changeHandler}></input>
 
-                {/* <select name="parentCategory" id="parentCategory" onChange={changeHandler}>
+                {/* < select name="parentCategory" id="parentCategory" onChange={changeHandler}>
                     {display.map(m => <option key={m.categoryId} value={m.categoryId}>{m.parentCategory}</option>)}
                 </select> */}
                 <input id='data'  name="parentCategory" onChange={changeHandler}></input>

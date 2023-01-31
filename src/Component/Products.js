@@ -10,7 +10,7 @@ import { FaBeer, FaDolly, FaEdit, FaHeart, FaTrash } from "react-icons/fa";
 
 export const Products = () => {
   const [products, setProducts] = useState([])
-  const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState([]); 
   const [filtervalue, setFiltervalue] = useState([]);
   const [open, setOpen] = useState(false);
   const [cart, setCart] = useState(false);
@@ -162,7 +162,28 @@ export const Products = () => {
 
 
       />
-
-    </>)
+        </>)
 
 }
+
+      // <div>
+      // {/* {
+      //     products.map(p =>
+      //       <div className='productDetails'>
+      //       <img src={`data:image/jpeg;base64,${p.photos}`} width='50px' height='70px'/>
+      //       <label>Name</label>
+      //         <p>{p.productName}</p>
+      //         <label>Price</label>
+      //         <p>{p.productPrice}</p>
+      //        {/* <p><Link to={`/edit-product/${p.productId}`} state={{ store: p }}><button className='actionBtn' title='update'><FaEdit/></button></Link>
+      //           <button className='actionBtn' onClick={() => deleteProducts(p.productId)}title='delete'><FaTrash/></button>
+      //            <button className='actionBtn' onClick={() => placeOrder(p)}  title='PlaceOrder'><FaDolly/></button>
+      //           <button className='actionBtn' onClick={() => addToCart(p)}  title='AddToCart'><FaHeart/></button>
+      //       </p> */}
+      //       {/* </div> */}
+      //     )
+      //   }
+
+      // </div> */
+
+  

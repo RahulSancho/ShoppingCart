@@ -49,3 +49,23 @@ margin-left: 10px;
   color: aliceblue;
 }
 
+
+.productDetails{
+  display: inline-flex;
+  justify-content:center ;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: 1px solid silver;
+  width: 150px;
+  height: 200px;
+}
+.productDetails img{
+  width: 100px;
+  height: 100px;
+}
+.productDetails label{
+  display: block;
+  position: relative;
+  margin-top: 20px;
+}

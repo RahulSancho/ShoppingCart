@@ -108,13 +108,14 @@ export const Categories = () => {
     <>
       {<GroupedSelect data = {catName}/>}
       <div>
-        {
-          _.map(filterResult, (r) => <Link onClick={(e) => getLayout(e, r)} >{r.categoryName}<br /></Link>)
+        <div >{
+          _.map(filterResult, (r) => <Link className='mainCategory' onClick={(e) => getLayout(e, r)} >{r.categoryName}<br /></Link>)
         }
+        </div>
       </div>
       <div>
         {_.map(Layout, (r) =>
-          <Link onClick={(e) => getInnerLayout(e, r)}>{r.categoryName}<br /></Link>)
+          <Link className='subCategory' onClick={(e) => getInnerLayout(e, r)}>{r.categoryName}<br /></Link>)
         }
         {_.map(innerLayout, l => {
           return <p>{l.categoryName}</p>

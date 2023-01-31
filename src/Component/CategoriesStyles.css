@@ -49,3 +49,21 @@ margin-left: 10px;
 font-style: italic;
 
 }
+
+
+.mainCategory{
+  display: inline-flex;
+  position: relative;
+  margin-left: 40px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+.subCategory{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+}
